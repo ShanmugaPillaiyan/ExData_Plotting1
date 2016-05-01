@@ -24,9 +24,9 @@ data_analysis$Time <- strptime(paste(as.character(data_analysis$Date), data_anal
 
 
 png("plot3.png", width = 480, height = 480)
-plot(data_analysis$Time, data_analysis$Sub_metering_1, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
-lines(data_analysis$Time, data_analysis$Sub_metering_2, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)",col="red")
-lines(data_analysis$Time, data_analysis$Sub_metering_3, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)",col="blue")
+plot(data_analysis$Time, data_analysis$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
+lines(data_analysis$Time, data_analysis$Sub_metering_2, type = "l", xlab = "", ylab = "Energy sub metering",col="red")
+lines(data_analysis$Time, data_analysis$Sub_metering_3, type = "l", xlab = "", ylab = "Energy sub metering",col="blue")
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("black", "red", "blue"))
 dev.off()
 
